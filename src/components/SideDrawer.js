@@ -122,15 +122,39 @@ import { Button } from "primereact/button";
 
 export default function SideDrawer({ isOpen, onClose }) {
     return (
-        <div className="card flex justify-content-center">
-            <Sidebar visible={true} onHide={() => onClose()}>
-                <h2>Sidebar</h2>
-                <p>
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-                    Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
-                </p>
-            </Sidebar>
-            <Button icon="pi pi-arrow-right" onClick={() => onClose()} />
-        </div>
+
+        <Sidebar visible={isOpen} onHide={() => onClose()}>
+            <div className="side-drawer-body">
+                <div className="menu-items">
+
+
+                    <Link href="/" passHref onClick={onClose}>
+                        {/* <Button variant="ghost" colorScheme="whiteAlpha" w="100%" onClick={onClose}> */}
+                        Home
+                        {/* </Button> */}
+                    </Link>
+
+                    <Link href="/products" passHref onClick={onClose}>
+                        {/* <Button variant="ghost" colorScheme="whiteAlpha" w="100%" onClick={onClose}> */}
+                        Products
+                        {/* </Button> */}
+                    </Link>
+
+                    <Link href="/about" passHref onClick={onClose}>
+                        {/* <Button variant="ghost" colorScheme="whiteAlpha" w="100%" onClick={onClose}> */}
+                        About Us
+                        {/* </Button> */}
+                    </Link>
+
+                    <Link href="/contact" passHref onClick={onClose}>
+                        {/* <Button variant="ghost" colorScheme="whiteAlpha" w="100%" onClick={onClose}> */}
+                        Contact
+                        {/* </Button> */}
+                    </Link>
+
+                </div>
+            </div>
+        </Sidebar>
+
     );
 }

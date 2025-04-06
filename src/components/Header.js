@@ -6,6 +6,7 @@ import { useState } from "react";
 import SideDrawer from "./SideDrawer";
 import styles from "./Header.scss";
 import Link from "next/link";
+import { Button } from "primereact/button";
 
 export default function Header() {
     const [isOpen, setIsOpen] = useState(false);
@@ -13,10 +14,16 @@ export default function Header() {
 
     const openDrawer = () => setIsOpen(true);
     const closeDrawer = () => setIsOpen(false);
+    let width = window.innerWidth;
+
+    console.log(width);
+
 
     return (
         <header className="header">
             <div className="logo">Solar</div>
+
+
 
             <div className="header-web">
                 <div >
@@ -40,9 +47,7 @@ export default function Header() {
                 </div>
             </div>
             <div className="header-mobile">
-                <button className="menuButton" onClick={openDrawer} aria-label="Open Menu">
-                    {/* <HamburgerIcon boxSize={6} /> */}
-                </button>
+                <Button icon="pi pi-bars" onClick={openDrawer} />
             </div>
 
 
