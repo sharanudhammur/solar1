@@ -14,9 +14,6 @@ export default function Header() {
 
     const openDrawer = () => setIsOpen(true);
     const closeDrawer = () => setIsOpen(false);
-    let width = window.innerWidth;
-
-    console.log(width);
 
 
     return (
