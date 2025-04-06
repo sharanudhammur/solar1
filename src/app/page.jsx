@@ -3,6 +3,7 @@
 import Image from "next/image";
 import "./Home.scss";
 import { RiArrowRightLine, RiMailLine } from "react-icons/ri"
+import { Button } from "primereact/button";
 
 export default function Home() {
   return (

@@ -1,6 +1,5 @@
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
-import { Provider } from "@/components/ui/provider"
 import Header from "../components/Header";
 import "primereact/resources/themes/lara-light-indigo/theme.css"; // or another theme
 import "primereact/resources/primereact.min.css";
@@ -25,12 +24,12 @@ export const metadata = {
 
 export default function RootLayout({ children }) {
   return (
-    <html lang="en" suppressHydrationWarning>
+    <html lang="en">
       <body className={`${geistSans.variable} ${geistMono.variable}`}>
-        <Provider>
-          <Header />
-          {children}
-        </Provider>
+
+        <Header />
+        {children}
+
       </body>
     </html>
   );

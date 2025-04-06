@@ -1,7 +1,7 @@
 "use client";
 
 import { usePathname } from "next/navigation";
-import { HamburgerIcon } from "@chakra-ui/icons";
+// import { HamburgerIcon } from "@chakra-ui/icons";
 import { useState } from "react";
 import SideDrawer from "./SideDrawer";
 import styles from "./Header.scss";
@@ -41,7 +41,7 @@ export default function Header() {
             </div>
             <div className="header-mobile">
                 <button className="menuButton" onClick={openDrawer} aria-label="Open Menu">
-                    <HamburgerIcon boxSize={6} />
+                    {/* <HamburgerIcon boxSize={6} /> */}
                 </button>
             </div>
 
